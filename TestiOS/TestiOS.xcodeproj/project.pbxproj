@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9289A7C5F34B50DD1D3B5ADF /* Pods_TestiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EED0498238240F07263DD74 /* Pods_TestiOS.framework */; };
 		FC5643F729F50CD500CB8898 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FC5643F629F50CD500CB8898 /* AppDelegate.m */; };
 		FC5643FA29F50CD500CB8898 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FC5643F929F50CD500CB8898 /* SceneDelegate.m */; };
 		FC5643FD29F50CD500CB8898 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC5643FC29F50CD500CB8898 /* ViewController.m */; };
@@ -17,6 +18,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0EED0498238240F07263DD74 /* Pods_TestiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		652E5303554E3F595228D3D7 /* Pods-TestiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestiOS.debug.xcconfig"; path = "Target Support Files/Pods-TestiOS/Pods-TestiOS.debug.xcconfig"; sourceTree = "<group>"; };
+		B1CAB4FD13F42C8C3F0FA58E /* Pods-TestiOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestiOS.release.xcconfig"; path = "Target Support Files/Pods-TestiOS/Pods-TestiOS.release.xcconfig"; sourceTree = "<group>"; };
 		FC5643F229F50CD500CB8898 /* TestiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC5643F529F50CD500CB8898 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FC5643F629F50CD500CB8898 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -36,17 +40,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9289A7C5F34B50DD1D3B5ADF /* Pods_TestiOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AF981EF1BCFB6D7A926E07EC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				652E5303554E3F595228D3D7 /* Pods-TestiOS.debug.xcconfig */,
+				B1CAB4FD13F42C8C3F0FA58E /* Pods-TestiOS.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		D3B19D4C4BCA458E76579848 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0EED0498238240F07263DD74 /* Pods_TestiOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FC5643E929F50CD500CB8898 = {
 			isa = PBXGroup;
 			children = (
 				FC5643F429F50CD500CB8898 /* TestiOS */,
 				FC5643F329F50CD500CB8898 /* Products */,
+				AF981EF1BCFB6D7A926E07EC /* Pods */,
+				D3B19D4C4BCA458E76579848 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,9 +107,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FC56440B29F50CD500CB8898 /* Build configuration list for PBXNativeTarget "TestiOS" */;
 			buildPhases = (
+				56F64C989AB993FFC43DE21E /* [CP] Check Pods Manifest.lock */,
 				FC5643EE29F50CD500CB8898 /* Sources */,
 				FC5643EF29F50CD500CB8898 /* Frameworks */,
 				FC5643F029F50CD500CB8898 /* Resources */,
+				4E33B8F8366DC032F2CF0D09 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -140,6 +166,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4E33B8F8366DC032F2CF0D09 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TestiOS/Pods-TestiOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TestiOS/Pods-TestiOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TestiOS/Pods-TestiOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		56F64C989AB993FFC43DE21E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TestiOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FC5643EE29F50CD500CB8898 /* Sources */ = {
@@ -287,6 +355,7 @@
 		};
 		FC56440C29F50CD500CB8898 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 652E5303554E3F595228D3D7 /* Pods-TestiOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -295,11 +364,13 @@
 				DEVELOPMENT_TEAM = E68FMQL6B9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TestiOS/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "集成iOS";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -307,13 +378,17 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.wcy.TestiOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		FC56440D29F50CD500CB8898 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B1CAB4FD13F42C8C3F0FA58E /* Pods-TestiOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -322,11 +397,13 @@
 				DEVELOPMENT_TEAM = E68FMQL6B9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TestiOS/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "集成iOS";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -334,8 +411,11 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.wcy.TestiOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

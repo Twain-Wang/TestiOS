@@ -1,0 +1,6 @@
+ENV['SWIFT_VERSION'] = '5'
+platform :ios, '11.0'
+	use_frameworks!
+	target 'TestiOS' do
+	pod 'BluetoothKit', '~> 0.2.0'
+end
